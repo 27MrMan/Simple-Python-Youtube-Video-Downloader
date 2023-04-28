@@ -9,6 +9,7 @@ FOR FIRST TIME ONLY:
   If you do not have Python 3.x+, then install it. (program was written with 3.11)
   Launch PowerShell and type these following commands:
     pip install pytube
+    
     pip install moviepy
     
     

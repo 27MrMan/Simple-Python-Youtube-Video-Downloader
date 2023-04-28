@@ -32,8 +32,7 @@ def AudioDownload(link):
         
 LDigits = input("Enter the full youtube URL")
 link = LDigits
-SkipVideoDownload = input("Do you want to download the video as an MP4? You have 5 seconds to answer. Reply with Y or N")
-time.sleep(5)
+SkipVideoDownload = input("Do you want to download the video as an MP4? Reply with Y or N")
 if  SkipVideoDownload == "Y":
     Download(link)
 else:

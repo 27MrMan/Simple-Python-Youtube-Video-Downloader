@@ -2,7 +2,9 @@ from pytube import YouTube
 from pytube.cli import on_progress
 from moviepy.editor import *
 import time
-    
+
+#Check bottom of file.
+
 link = input("Enter the full youtube URL")
 SkipVideoDownload = input("Do you want to download the video as an MP4? Reply with Y or N")
 if  SkipVideoDownload == "Y":
@@ -31,3 +33,4 @@ print("Download Completed Successfully")
 print("Completed")
 time.sleep(5)
 #Line 78 of innertube.py in pytube folder must be changed from ANDRIOD to WEB.
+#Progress bar does not work due to some issues with Pytube.

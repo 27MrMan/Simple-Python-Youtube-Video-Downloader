@@ -30,4 +30,4 @@ else:
 print("Download Completed Successfully")
 print("Completed")
 time.sleep(5)
-#Line 78 of innertube.py in pytube folder has been changed from ANDRIOD to WEB. As soon as fix is found, fix it.
+#Line 78 of innertube.py in pytube folder must be changed from ANDRIOD to WEB.

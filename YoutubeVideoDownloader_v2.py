@@ -17,18 +17,20 @@ if  SkipVideoDownload == "Y":
     print("Download is completed successfully")
 
 else:
-    yt = YouTube(link, on_progress_callback=on_progress)
+    yt = YouTube(link)
     ytstreams = yt.streams
     mp4streams = ytstreams.filter(file_extension='mp4')
-    print(mp4streams.get_lowest_resolution(), "Download with start soon...")
+    print(mp4streams.get_lowest_resolution())
     lowres = mp4streams.get_lowest_resolution()
-    lowres.download(output_path="D:/")
+    lowres.download(output_path="D:/", filename="tobeconverted.mp4")
+    print("Download Completed Successfully")
     VideoNamed = yt.title
-    VideoName = VideoNamed + ".mp4"
-    print(VideoName)
-    video = VideoFileClip(VideoName)
+    print(VideoNamed)
+    video = VideoFileClip(filename="tobeconverted.mp4")
+    VideoName = VideoNamed+".mp3"
     audio = video.audio
-    audio.write_audiofile(VideoName[:-3]+"mp3")
+    audio.write_audiofile(filename=VideoName, codec="aac",)
+#FIX!!! codec has been changed to aac due to some random videos defaulting to libx256 or something
 print("Download Completed Successfully")
 print("Completed")
 time.sleep(5)

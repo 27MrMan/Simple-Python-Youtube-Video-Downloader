@@ -24,13 +24,12 @@ else:
     lowres = mp4streams.get_lowest_resolution()
     lowres.download(output_path="D:/", filename="tobeconverted.mp4")
     print("Download Completed Successfully")
+    FileName=input("What should the final file's name be? (NO SPACES) ")
     VideoNamed = yt.title
     print(VideoNamed)
     video = VideoFileClip(filename="tobeconverted.mp4")
-    VideoName = VideoNamed+".mp3"
     audio = video.audio
-    audio.write_audiofile(filename=VideoName, codec="aac",)
-#FIX!!! codec has been changed to aac due to some random videos defaulting to libx256 or something
+    audio.write_audiofile(filename=FileName+".mp3")
 print("Download Completed Successfully")
 print("Completed")
 time.sleep(5)

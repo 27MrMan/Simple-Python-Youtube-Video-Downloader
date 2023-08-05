@@ -6,7 +6,7 @@ A simple python youtube video downloader, works as an MP4 downloader, or an MP3 
 FOR FIRST TIME ONLY:
 
   If you are using Windows, search for the program Power Shell. 
-  If you do not have Python 3.10+, then install it. (program was written with 3.11)
+  If you do not have Python 3.10+, then install it from Microsoft Store. (program was written with 3.11)
   
   
   Launch PowerShell and type these following commands:

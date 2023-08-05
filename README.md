@@ -9,9 +9,6 @@ FOR FIRST TIME ONLY:
   If you do not have Python 3.10+, then install it. (program was written with 3.11)
   
   
-  !!! BUGFIX !!! Line 78 of innertube.py in pytube folder must be changed from ANDRIOD to WEB.
-  
-  
   Launch PowerShell and type these following commands:
   
     pip install pytube

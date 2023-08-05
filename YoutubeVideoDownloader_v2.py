@@ -6,6 +6,7 @@ from moviepy import editor
 from moviepy import video
 import time
 
+time.sleep(1)
 
 link = input("Enter the full youtube URL ")
 SkipVideoDownload = input("Do you want to download the video as an MP4? Reply with Y or N ")

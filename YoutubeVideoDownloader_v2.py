@@ -1,9 +1,12 @@
-#importing, if doesnt work, check readme
+#importing the various modules: "pytube" and "moviepy"
+
 from pytube import YouTube
 from pytube.cli import on_progress
-from moviepy.editor import *
+from moviepy import editor
+from moviepy import video
 import time
-    
+
+
 link = input("Enter the full youtube URL ")
 SkipVideoDownload = input("Do you want to download the video as an MP4? Reply with Y or N ")
 if  SkipVideoDownload == "Y":
@@ -24,11 +27,10 @@ elif SkipVideoDownload == "N":
     lowres = mp4streams.get_lowest_resolution()
     lowres.download(output_path="D:/", filename="tobeconverted.mp4")
     print("Download Completed Successfully")
-    video = VideoFileClip(filename="tobeconverted.mp4")
-    video.audio.write_audiofile(filename="convertedfile.wav", codec="pcm_s32le")
-
+    video2 = video.VideoFileClip(filename="tobeconverted.mp4")
+    video2.audio.write_audiofile(filename="convertedfile.wav", codec="pcm_s32le")
 else:
-    print(" Type 'Y' or 'N' ")
-    
-print("Completed")
+    print("Type it exactly as 'Y' or 'N' (without the quotes)")
+print("Completed, closing...")
+
 time.sleep(5)

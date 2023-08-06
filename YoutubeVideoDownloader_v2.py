@@ -9,7 +9,7 @@ import time
 time.sleep(1)
 
 link = input("Enter the full youtube URL ")
-SkipVideoDownload = input("Do you want to download the video as an MP4? Reply with Y or N ")
+SkipVideoDownload = input("Do you want to download the video? Reply with Y, or N to split audio.")
 if  SkipVideoDownload == "Y":
     yt = YouTube(link, on_progress_callback=on_progress)
     ytstreams = yt.streams

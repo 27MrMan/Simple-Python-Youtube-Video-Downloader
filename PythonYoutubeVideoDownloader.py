@@ -37,6 +37,14 @@ elif SkipVideoDownload == "N":
     audio.write_audiofile(filename=downloads_path+"AudioOnlyDownload.wav", codec="pcm_s32le")
     print("File has been converted")
 
+    audio = AudioSegment.from_file(downloads_path+"AudioOnlyDownload.wav")
+    time.sleep(.2)
+
+    print("Compressing... This may or may not take a while")
+    audio.export(downloads_path +"CompressedOutput.mp3", format='mp3', bitrate='256k')
+    print("Completed")
+    time.sleep(2)
+
 else:
     print("Type it exactly as 'Y' or 'N' (without the quotes). Run the program agian")
 

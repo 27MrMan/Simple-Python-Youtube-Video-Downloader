@@ -3,6 +3,7 @@ from pytube import YouTube
 from pytube.cli import on_progress
 from moviepy.editor import *
 import time
+from pydub import AudioSegment
 
 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
 downloads_path = os.path.normpath(downloads_path) + "/"

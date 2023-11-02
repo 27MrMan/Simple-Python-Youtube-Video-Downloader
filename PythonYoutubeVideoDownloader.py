@@ -4,12 +4,13 @@ from pytube.cli import on_progress
 from moviepy.editor import *
 import time
 from pydub import AudioSegment
+import os
 
 downloads_path = os.path.join(os.path.expanduser("~"), "Downloads")
 downloads_path = os.path.normpath(downloads_path) + "/"
-downloads_path = str(downloads_path)
+downloads_path = str(downloads_path.replace("\\", "/"))
 print(" Video will be downloaded to ", downloads_path)
-
+print(downloads_path+"compressedoutput.mp4")
 #program start 
 time.sleep(1)
 
@@ -35,14 +36,15 @@ elif SkipVideoDownload == "N":
     print("Download Completed Successfully")
     video = VideoFileClip(filename=downloads_path+"Video+AudioDownload.mp4")
     audio = video.audio
-    audio.write_audiofile(filename=downloads_path+"AudioOnlyDownload.wav", codec="pcm_s32le")
+    audio.write_audiofile(filename="C:/tmp/AudioOnlyDownload.wav", codec="pcm_s32le")
     print("File has been converted")
 
-    audio = AudioSegment.from_file(downloads_path+"AudioOnlyDownload.wav")
+    audio = AudioSegment.from_file("C:/tmp/AudioOnlyDownload.wav")
     time.sleep(.2)
 
     print("Compressing... This may or may not take a while")
-    audio.export(downloads_path +"CompressedOutput.mp3", format='mp3', bitrate='256k')
+    audio.export("C:/tmp/CompressedAudio.mp3", format='mp3', bitrate='256k')
+    os.replace("C:/tmp/CompressedAudio.mp3", downloads_path+"CompressedAudio.mp3")
     print("Completed")
     time.sleep(2)
 

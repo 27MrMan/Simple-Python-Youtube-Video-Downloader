@@ -1,6 +1,8 @@
 # Simple-Python-Youtube-Video-Downloader
 A simple python youtube video downloader, works as an MP4 downloader, or an MP3 downloader
 
+#INFO
+I am currently working on a version with a GUI and more features. ETA unknown.
 
 # How to use:
 FOR FIRST TIME ONLY:
